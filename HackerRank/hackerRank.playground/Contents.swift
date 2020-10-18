@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: Sock Merchant Problem:
+// MARK:- Sock Merchant Problem:
 /*
  John works at a clothing store. He has a large pile of socks that he must pair by color for sale. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
  */
@@ -31,7 +31,7 @@ import Foundation
 //
 //print(sockMerchant(ar: [10, 20, 20, 10, 10, 30, 50, 10, 20, 20,50]))
 
-// MARK: Avid Hiker problem
+// MARK:- Avid Hiker problem
 /*
  Gary is an avid hiker. He tracks his hikes meticulously, paying close attention to small details like topography. During his last hike he took exactly  steps. For every step he took, he noted if it was an uphill, , or a downhill,  step. Gary's hikes start and end at sea level and each step up or down represents a  unit change in altitude. We define the following terms:
  
@@ -60,7 +60,7 @@ import Foundation
 //
 //print(countingValleys(s: "UDDDUDUUDDUU"))
 
-// MARK: Jumping on the Clouds
+// MARK:- Jumping on the Clouds
 /*
   Emma will get an array of clouds numbered  if they are safe or  if they must be avoided. For example,  indexed from. The number on each cloud is its index in the list so she must avoid the clouds at indexes  and. She could follow the following two paths:  or . The first path takes jumps while the second takes. Find minimum number of steps to complete level.
  */
@@ -94,6 +94,7 @@ import Foundation
 //print("minimum Steps: \(result.0), and the game \(result.1 ? "is Finished." : "cannot be completed.")")
 
 
+// MARK:- reverseWords
 
 //func reverseWords(inputWords: String) -> String {
 //    let words = inputWords.components(separatedBy: " ")
@@ -102,6 +103,7 @@ import Foundation
 //
 //print(reverseWords(inputWords: "hopscotch is best"))
 
+// MARK:- getFirstTwoItemsWithoutPair
 
 //func sortDates(dates: [String]) -> [String] {
 //    var convertedArray: [Date] = []
@@ -119,6 +121,8 @@ import Foundation
 //}
 //
 //print(sortDates(dates: ["25 Jun 2016", "30 Jun 2016", "28 Jun 2016", "2 Jul 2016"]))
+
+//  MARK:- getFirstTwoItemsWithoutPair
 
 //func getFirstTwoItemsWithoutPair(list: [Int]) -> [Int] {
 //    var nonRepeated = [Int]()
@@ -142,4 +146,41 @@ import Foundation
 //}
 //
 //print(getFirstTwoItemsWithoutPair(list: [2,23,23,66,7,2]))
+
+// MARK:-  Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+//func printMaxAndMinSum(fiveInts: [Int]) {
+//    let sorted = fiveInts.sorted()
+//    var maxSum = 0
+//    var minSum = 0
+//    sorted.enumerated().forEach {
+//        if $0.offset != 0 {
+//            maxSum += $0.element
+//        }
+//        if $0.offset < 4 {
+//            minSum += $0.element
+//        }
+//    }
+//    print("\(maxSum) \(minSum)")
+//}
+
+// MARK:-  You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
+
+//func tallestCandleCount(candles: [Int]) -> Int {
+//    guard !candles.isEmpty else {
+//        return 0
+//    }
+//    let sorted = candles.sorted(by: >)
+//    var numberOfTallestCandles = 0
+//    let tallestCandle = sorted[0]
+//    for candle in sorted {
+//        if tallestCandle != candle {
+//            break
+//        }
+//        numberOfTallestCandles += 1
+//    }
+//    return numberOfTallestCandles
+//}
+//
+//print(tallestCandleCount(candles: [9,2,4,5,4,9,9,7,9,1,2,9]))
 
