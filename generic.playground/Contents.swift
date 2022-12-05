@@ -1,5 +1,5 @@
 while let input = readLine() {
-    guard input != "quit" else {
+    guard input != "q" else {
         break
     }
     
